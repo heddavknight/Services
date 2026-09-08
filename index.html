@@ -341,6 +341,49 @@ nav {
   color: var(--text-light);
 }
 
+/* ─── COACHING JOURNEYS (bundles) ─── */
+.journeys { padding: 0 48px 80px; max-width: 1080px; margin: 0 auto; }
+.journeys-note { font-size: 0.92rem; color: var(--text-light); text-align: center; max-width: 580px; margin: 0 auto 46px; line-height: 1.7; }
+.journey-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.journey-card { background: var(--white); border: 1px solid var(--border); padding: 34px 28px; display: flex; flex-direction: column; transition: box-shadow 0.25s ease, transform 0.25s ease; }
+.journey-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.journey-card.featured { background: var(--accent); color: var(--white); border-color: var(--accent); }
+.journey-tag { font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); margin-bottom: 22px; }
+.journey-card.featured .journey-tag { color: var(--primary); }
+.journey-months { font-family: var(--font-display); font-size: 3.2rem; font-weight: 300; line-height: 1; color: var(--secondary); }
+.journey-card.featured .journey-months { color: var(--primary); }
+.journey-of { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); margin: 8px 0 22px; }
+.journey-card.featured .journey-of { color: rgba(255,255,255,0.6); }
+.journey-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.55; margin-bottom: 24px; min-height: 90px; }
+.journey-card.featured .journey-desc { color: rgba(255,255,255,0.72); }
+.journey-foot { margin-top: auto; border-top: 1px solid var(--border); padding-top: 18px; }
+.journey-card.featured .journey-foot { border-color: rgba(255,255,255,0.15); }
+.journey-sessions { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 8px; }
+.journey-card.featured .journey-sessions { color: rgba(255,255,255,0.6); }
+.journey-price { font-family: var(--font-display); font-size: 1.9rem; font-weight: 400; color: var(--text); line-height: 1; }
+.journey-card.featured .journey-price { color: var(--white); }
+.journey-instal { font-size: 0.74rem; color: var(--secondary); margin-top: 5px; }
+.journey-card.featured .journey-instal { color: rgba(255,255,255,0.55); }
+.journey-card .cta-btn { width: 100%; margin-top: 24px; }
+@media (max-width: 900px) { .journey-grid { grid-template-columns: repeat(2, 1fr); } .journey-desc { min-height: 0; } }
+@media (max-width: 560px) { .journeys { padding: 0 24px 60px; } .journey-grid { grid-template-columns: 1fr; } }
+
+
+
+/* ─── LONG-TERM (In Your Corner) ─── */
+.longterm { padding: 0 48px 80px; max-width: 820px; margin: 0 auto; }
+.longterm-card { background: var(--bg2); border: 1px solid var(--border); border-top: 3px solid var(--secondary); padding: 56px 52px; text-align: center; }
+.longterm-eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--secondary); margin-bottom: 16px; }
+.longterm-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
+.longterm-title em { font-style: italic; color: var(--secondary); }
+.longterm-body { font-size: 0.95rem; color: var(--text-light); line-height: 1.75; max-width: 580px; margin: 0 auto 34px; }
+.longterm-price { font-family: var(--font-display); font-size: 3rem; font-weight: 400; color: var(--text); line-height: 1; }
+.longterm-unit { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); margin-top: 8px; }
+.longterm-detail { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; max-width: 520px; margin: 22px auto 0; }
+.longterm-detail strong { color: var(--text); font-weight: 500; }
+.longterm-note { font-size: 0.82rem; color: var(--text-light); font-style: italic; line-height: 1.7; max-width: 500px; margin: 30px auto 0; padding-top: 22px; border-top: 1px solid var(--border); }
+@media (max-width: 560px) { .longterm { padding: 0 24px 60px; } .longterm-card { padding: 44px 26px; } }
+
 /* ─── PAYMENT NOTE ─── */
 .payment-section {
   padding: 0 48px 100px;
@@ -556,73 +599,63 @@ footer {
   <div class="divider-line"></div>
 </div>
 
-<!-- PROGRAMS -->
-<section class="programs">
-  <p class="section-label">Signature Programs</p>
+<!-- COACHING JOURNEYS -->
+<section class="journeys">
+  <p class="section-label">1:1 Coaching Journeys</p>
+  <p class="journeys-note">Real change doesn't happen in a single session. Choose the length of support that fits where you are, and we'll shape the work together. Your sessions are yours to use across the months below, usually one every couple of weeks.</p>
 
-  <div class="program-grid">
+  <div class="journey-grid">
 
-    <!-- Shift From Within -->
-    <div class="program-card">
-      <p class="program-tag">Identity · NLP · Hypnosis</p>
-      <h2 class="program-name"><em>Identity</em><br>Shift</h2>
-      <p class="program-tagline">A 3-month deep dive into identity — rewiring your subconscious and stepping into who you were always meant to be.</p>
-      <div class="program-divider"></div>
-      <ul class="program-details">
-        <li class="program-detail"><span class="detail-icon">◆</span> 6 sessions over 3 months</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> NLP techniques for identity shift</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Personalised hypnosis recording (yours to keep)</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Messaging support between sessions</li>
-      </ul>
-      <div class="program-price-block">
-        <p class="program-price-label">Investment</p>
-        <p class="program-price">$1,050</p>
-        <p class="program-payment">or 3 × $350</p>
-        <p class="program-payment" style="margin-top:6px; opacity:0.7;">$88/week &nbsp;·&nbsp; $350/month</p>
+    <div class="journey-card">
+      <p class="journey-tag">A Focused Reset</p>
+      <div class="journey-months">1</div>
+      <p class="journey-of">month of coaching</p>
+      <p class="journey-desc">Two focused sessions to move through a specific challenge, decision, or block you keep circling.</p>
+      <div class="journey-foot">
+        <p class="journey-sessions">2 sessions</p>
+        <p class="journey-price">$280</p>
+        <p class="journey-instal">instalments available</p>
       </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Apply now</a>
+      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
     </div>
 
-    <!-- Build From Within — FEATURED -->
-    <div class="program-card featured">
-      <p class="program-tag">Mindset · Clarity · Confidence</p>
-      <h2 class="program-name"><em>Build</em><br>From Within</h2>
-      <p class="program-tagline">For early-stage entrepreneurs ready to build a business that actually feels like them — from the inside out. 3 months to go deeper.</p>
-      <div class="program-divider"></div>
-      <ul class="program-details">
-        <li class="program-detail"><span class="detail-icon">◆</span> 6 sessions over 3 months</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Values &amp; clarity foundation session</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Mindset &amp; habit support</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Messaging support between sessions</li>
-      </ul>
-      <div class="program-price-block">
-        <p class="program-price-label">Investment</p>
-        <p class="program-price">$950</p>
-        <p class="program-payment">or 3 × $317</p>
-        <p class="program-payment" style="margin-top:6px; opacity:0.8;">$79/week &nbsp;·&nbsp; $317/month</p>
+    <div class="journey-card">
+      <p class="journey-tag">Build Momentum</p>
+      <div class="journey-months">1–2</div>
+      <p class="journey-of">months of coaching</p>
+      <p class="journey-desc">Enough time to identify what's really going on, build awareness, and start practising new strategies.</p>
+      <div class="journey-foot">
+        <p class="journey-sessions">4 sessions</p>
+        <p class="journey-price">$520</p>
+        <p class="journey-instal">instalments available</p>
       </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-light">Apply now</a>
+      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
     </div>
 
-    <!-- Lead From Within -->
-    <div class="program-card">
-      <p class="program-tag">Leadership · Habits · Decisions</p>
-      <h2 class="program-name"><em>Lead</em><br>From Within</h2>
-      <p class="program-tagline">For CEOs and leaders who want to show up with clarity, make bold decisions, and lead their teams with grounded confidence.</p>
-      <div class="program-divider"></div>
-      <ul class="program-details">
-        <li class="program-detail"><span class="detail-icon">◆</span> 8 sessions over 3 months</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> High-performance habits framework</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Priority messaging between sessions</li>
-        <li class="program-detail"><span class="detail-icon">◆</span> Decision-making support included</li>
-      </ul>
-      <div class="program-price-block">
-        <p class="program-price-label">Investment</p>
-        <p class="program-price">$1,450</p>
-        <p class="program-payment">or 3 × $483</p>
-        <p class="program-payment" style="margin-top:6px; opacity:0.7;">$121/week &nbsp;·&nbsp; $483/month</p>
+    <div class="journey-card featured">
+      <p class="journey-tag">Most Popular</p>
+      <div class="journey-months">2–3</div>
+      <p class="journey-of">months of coaching</p>
+      <p class="journey-desc">The sweet spot. Space to go deep, rewire what's been holding you back, and let real change take hold.</p>
+      <div class="journey-foot">
+        <p class="journey-sessions">6 sessions</p>
+        <p class="journey-price">$690</p>
+        <p class="journey-instal">instalments available</p>
       </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Apply now</a>
+      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-light">Enquire →</a>
+    </div>
+
+    <div class="journey-card">
+      <p class="journey-tag">Deep, Lasting Change</p>
+      <div class="journey-months">3–4</div>
+      <p class="journey-of">months of coaching</p>
+      <p class="journey-desc">The full journey. Sustained support to transform how you think, decide, and show up.</p>
+      <div class="journey-foot">
+        <p class="journey-sessions">8 sessions</p>
+        <p class="journey-price">$840</p>
+        <p class="journey-instal">instalments available</p>
+      </div>
+      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
     </div>
 
   </div>
@@ -634,71 +667,42 @@ footer {
   <div class="divider-line"></div>
 </div>
 
-<!-- BUNDLES -->
-<section class="bundles">
-  <p class="section-label">Session Bundles</p>
-  <p class="bundles-note">Not sure which program is right for you yet? Session bundles let you explore coaching at your own pace — with the same depth and commitment.</p>
-  <p class="bundles-note" style="margin-top: 8px; font-size: 0.85rem; opacity: 0.75;">Sessions are recommended every two weeks. Weekly price is based on this cadence — it may vary if you prefer more or less frequent sessions.</p>
-
-  <div class="bundle-grid">
-    <div class="bundle-card">
-      <div class="bundle-sessions">2</div>
-      <div class="bundle-label">sessions</div>
-      <div class="bundle-price">$280</div>
-      <div class="bundle-per">$70 / week</div>
-    </div>
-    <div class="bundle-card">
-      <div class="bundle-sessions">4</div>
-      <div class="bundle-label">sessions</div>
-      <div class="bundle-price">$520</div>
-      <div class="bundle-per">$65 / week</div>
-    </div>
-    <div class="bundle-card">
-      <div class="bundle-sessions">6</div>
-      <div class="bundle-label">sessions</div>
-      <div class="bundle-price">$690</div>
-      <div class="bundle-per">$58 / week</div>
-    </div>
-    <div class="bundle-card">
-      <div class="bundle-sessions">8</div>
-      <div class="bundle-label">sessions</div>
-      <div class="bundle-price">$840</div>
-      <div class="bundle-per">$52 / week</div>
-    </div>
+<!-- LONG-TERM CLIENTS -->
+<section class="longterm">
+  <div class="longterm-card">
+    <p class="longterm-eyebrow">For Continuing Clients</p>
+    <h2 class="longterm-title">In Your <em>Corner</em></h2>
+    <p class="longterm-body">Once we've worked together for three months or more, you're invited to keep going, on your terms. This is a flexible, ongoing way to continue coaching at a long-term client rate, without committing to another block up front. Book a session whenever you need one, space them out exactly as suits your life, and I'll stay in your corner between sessions with ongoing support.</p>
+    <div class="longterm-price">$200</div>
+    <div class="longterm-unit">every two sessions</div>
+    <p class="longterm-detail">That works out to <strong>$100 a session</strong>, spaced however you like. One session a month is just <strong>$100 a month</strong>, with my support in between. You're charged every two sessions, so it flexes with wherever life takes you.</p>
+    <p class="longterm-note">Offered to clients after three months of working together, a thank you for going the distance, and a more sustainable way to keep the work going for as long as it serves you.</p>
   </div>
 </section>
 
-<!-- PAYMENT PLANS -->
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-dot"></div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- FLEXIBLE PAYMENT -->
 <section class="payment-section">
-  <h2 class="payment-title">Flexible payment plans</h2>
-  <p class="payment-body">All programs are available in instalments so the investment feels manageable — without compromising the work. Choose what works for you.</p>
-  <div class="payment-plans">
-    <div class="payment-plan">
-      <strong>Identity Shift</strong>
-      Full: $1,050 &nbsp;·&nbsp; 3 × $350
-    </div>
-    <div class="payment-plan">
-      <strong>Build From Within</strong>
-      Full: $950 &nbsp;·&nbsp; 3 × $317
-    </div>
-    <div class="payment-plan">
-      <strong>Lead From Within</strong>
-      Full: $1,450 &nbsp;·&nbsp; 3 × $483
-    </div>
-  </div>
+  <h2 class="payment-title">Flexible payment</h2>
+  <p class="payment-body">Every journey can be split into instalments, so the investment feels manageable without compromising the work. We'll find a rhythm that suits you and map out your sessions together on our first call.</p>
 </section>
 
 <!-- NEXT STEPS -->
 <section class="next-steps">
   <p class="hero-eyebrow" style="margin-bottom:16px;">Ready to start?</p>
   <h2 class="next-steps-title">Here's how it works</h2>
-  <p class="next-steps-sub">Once you know which program feels right, reaching out takes less than a minute. Not quite sure yet? A free discovery call is the perfect first step — no commitment, just a conversation.</p>
+  <p class="next-steps-sub">Once you know which journey feels right, reaching out takes less than a minute. Not quite sure yet? A free discovery call is the perfect first step — no commitment, just a conversation.</p>
 
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-number">01</div>
       <h3 class="step-title">Reach out</h3>
-      <p class="step-body">Message on WhatsApp or email to let me know which program you're interested in and a little about where you're at right now.</p>
+      <p class="step-body">Message on WhatsApp or email to let me know which journey you're interested in and a little about where you're at right now.</p>
       <div class="step-actions">
         <a href="https://wa.link/hhdygv" target="_blank" class="step-btn step-btn-primary">WhatsApp</a>
         <a href="mailto:selftrustclub@outlook.com" class="step-btn step-btn-secondary">Email</a>
