@@ -384,6 +384,45 @@ nav {
 .longterm-note { font-size: 0.82rem; color: var(--text-light); font-style: italic; line-height: 1.7; max-width: 500px; margin: 30px auto 0; padding-top: 22px; border-top: 1px solid var(--border); }
 @media (max-width: 560px) { .longterm { padding: 0 24px 60px; } .longterm-card { padding: 44px 26px; } }
 
+
+/* ─── SERVICES v2 ─── */
+.svc-intro { padding: 0 48px; max-width: 650px; margin: 0 auto 52px; text-align: center; }
+.svc-lead { font-size: 1rem; color: var(--text-light); line-height: 1.75; }
+.deepdive { padding: 0 48px 20px; max-width: 1000px; margin: 0 auto; }
+.deepdive-card { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--secondary); padding: 44px 46px; display: grid; grid-template-columns: 1fr auto; gap: 44px; align-items: center; }
+.dd-tag { font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--secondary); margin-bottom:12px; }
+.dd-title { font-family:var(--font-display); font-size:2.1rem; font-weight:400; margin-bottom:8px; }
+.dd-sub { font-family:var(--font-display); font-style:italic; font-size:1.2rem; color:var(--text); margin-bottom:16px; }
+.dd-desc { font-size:0.9rem; color:var(--text-light); line-height:1.7; max-width:640px; }
+.dd-action { flex-shrink:0; }
+.dd-action .cta-btn { white-space:nowrap; }
+.containers { padding: 0 48px 80px; max-width: 1080px; margin: 0 auto; }
+.container-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:20px; }
+.container-card { background: var(--white); border:1px solid var(--border); padding:40px 32px; display:flex; flex-direction:column; transition: box-shadow .25s ease, transform .25s ease; }
+.container-card:hover { box-shadow:0 12px 40px rgba(0,0,0,0.07); transform:translateY(-2px); }
+.container-card.featured { background:var(--accent); color:var(--white); border-color:var(--accent); }
+.container-badge { display:inline-block; align-self:flex-start; font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; background:var(--primary); color:var(--accent); padding:4px 11px; margin-bottom:18px; }
+.container-tag { font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--secondary); margin-bottom:16px; }
+.container-card.featured .container-tag { color:var(--primary); }
+.container-duration { font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-light); margin-bottom:8px; }
+.container-card.featured .container-duration { color:rgba(255,255,255,0.6); }
+.container-name { font-family:var(--font-display); font-size:2.1rem; font-weight:400; line-height:1.05; margin-bottom:12px; color:var(--text); }
+.container-name em { font-style:italic; color:var(--secondary); }
+.container-card.featured .container-name { color:#fff; }
+.container-card.featured .container-name em { color:var(--primary); }
+.container-sub { font-family:var(--font-display); font-style:italic; font-size:1.15rem; color:var(--text); margin-bottom:18px; line-height:1.3; }
+.container-card.featured .container-sub { color:#fff; }
+.container-desc { font-size:0.88rem; color:var(--text-light); line-height:1.65; margin-bottom:28px; }
+.container-card.featured .container-desc { color:rgba(255,255,255,0.72); }
+.container-card .cta-btn { width:100%; margin-top:20px; }
+.container-price { font-family:var(--font-display); font-size:1.9rem; font-weight:400; color:var(--text); margin-top:auto; line-height:1; }
+.container-card.featured .container-price { color:#fff; }
+.container-priced { font-size:0.76rem; color:var(--text-light); margin-top:6px; }
+.container-card.featured .container-priced { color:rgba(255,255,255,0.55); }
+.dd-price { font-family:var(--font-display); font-size:1.9rem; color:var(--text); margin-bottom:14px; text-align:center; }
+@media (max-width: 900px) { .container-grid { grid-template-columns: 1fr; } .deepdive-card { grid-template-columns: 1fr; gap: 28px; } .dd-action .cta-btn { width:100%; } }
+@media (max-width: 560px) { .svc-intro, .deepdive, .containers { padding-left:24px; padding-right:24px; } .deepdive-card { padding: 36px 26px; } .container-card { padding: 36px 26px; } }
+
 /* ─── PAYMENT NOTE ─── */
 .payment-section {
   padding: 0 48px 100px;
@@ -588,9 +627,9 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <p class="hero-eyebrow">Investment</p>
+  <p class="hero-eyebrow">Private Coaching</p>
   <h1 class="hero-title">Ways to work<br><em>together</em></h1>
-  <p class="hero-sub">This is an investment in yourself — in the version of you who trusts their instincts, leads from their values, and builds from the inside out.</p>
+  <p class="hero-sub">One-to-one coaching, shaped entirely around you. Not a fixed program or a template, just the support you actually need, for as long as you need it.</p>
 </section>
 
 <div class="divider">
@@ -599,65 +638,26 @@ footer {
   <div class="divider-line"></div>
 </div>
 
-<!-- COACHING JOURNEYS -->
-<section class="journeys">
-  <p class="section-label">1:1 Coaching Journeys</p>
-  <p class="journeys-note">Real change doesn't happen in a single session. Choose the length of support that fits where you are, and we'll shape the work together. Your sessions are yours to use across the months below, usually one every couple of weeks.</p>
+<!-- INTRO -->
+<section class="svc-intro">
+  <p class="section-label">1:1 Coaching</p>
+  <p class="svc-lead">None of these are a fixed curriculum. Each is a container with a clear direction, and the coaching inside is shaped entirely around you, your life, and what you actually need. Here are the ways we can work together.</p>
+</section>
 
-  <div class="journey-grid">
-
-    <div class="journey-card">
-      <p class="journey-tag">A Focused Reset</p>
-      <div class="journey-months">1</div>
-      <p class="journey-of">month of coaching</p>
-      <p class="journey-desc">Two focused sessions to move through a specific challenge, decision, or block you keep circling.</p>
-      <div class="journey-foot">
-        <p class="journey-sessions">2 sessions</p>
-        <p class="journey-price">$280</p>
-        <p class="journey-instal">instalments available</p>
-      </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
+<!-- 90 MIN DEEP DIVE -->
+<section class="deepdive">
+  <p class="section-label">A Single Session</p>
+  <div class="deepdive-card">
+    <div class="dd-body">
+      <p class="dd-tag">Let's explore this</p>
+      <h3 class="dd-title">90 Minute Deep Dive</h3>
+      <p class="dd-sub">One topic. One focused session. A new perspective.</p>
+      <p class="dd-desc">Bring one specific topic, situation, or area of your life you want to explore. Together we'll unpack what's happening beneath the surface, the beliefs, patterns, and perspectives shaping how you think, feel, and respond, so you leave with real clarity and a new way of seeing it. Perfect if you're not looking for ongoing coaching, but there's something you feel stuck, confused, or conflicted about.</p>
     </div>
-
-    <div class="journey-card">
-      <p class="journey-tag">Build Momentum</p>
-      <div class="journey-months">1–2</div>
-      <p class="journey-of">months of coaching</p>
-      <p class="journey-desc">Enough time to identify what's really going on, build awareness, and start practising new strategies.</p>
-      <div class="journey-foot">
-        <p class="journey-sessions">4 sessions</p>
-        <p class="journey-price">$520</p>
-        <p class="journey-instal">instalments available</p>
-      </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
+    <div class="dd-action">
+      <p class="dd-price">$150</p>
+      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire &rarr;</a>
     </div>
-
-    <div class="journey-card featured">
-      <p class="journey-tag">Most Popular</p>
-      <div class="journey-months">2–3</div>
-      <p class="journey-of">months of coaching</p>
-      <p class="journey-desc">The sweet spot. Space to go deep, rewire what's been holding you back, and let real change take hold.</p>
-      <div class="journey-foot">
-        <p class="journey-sessions">6 sessions</p>
-        <p class="journey-price">$690</p>
-        <p class="journey-instal">instalments available</p>
-      </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-light">Enquire →</a>
-    </div>
-
-    <div class="journey-card">
-      <p class="journey-tag">Deep, Lasting Change</p>
-      <div class="journey-months">3–4</div>
-      <p class="journey-of">months of coaching</p>
-      <p class="journey-desc">The full journey. Sustained support to transform how you think, decide, and show up.</p>
-      <div class="journey-foot">
-        <p class="journey-sessions">8 sessions</p>
-        <p class="journey-price">$840</p>
-        <p class="journey-instal">instalments available</p>
-      </div>
-      <a href="https://wa.link/hhdygv" target="_blank" class="cta-btn cta-btn-dark">Enquire →</a>
-    </div>
-
   </div>
 </section>
 
@@ -667,42 +667,59 @@ footer {
   <div class="divider-line"></div>
 </div>
 
-<!-- LONG-TERM CLIENTS -->
-<section class="longterm">
-  <div class="longterm-card">
-    <p class="longterm-eyebrow">For Continuing Clients</p>
-    <h2 class="longterm-title">In Your <em>Corner</em></h2>
-    <p class="longterm-body">Once we've worked together for three months or more, you're invited to keep going, on your terms. This is a flexible, ongoing way to continue coaching at a long-term client rate, without committing to another block up front. Book a session whenever you need one, space them out exactly as suits your life, and I'll stay in your corner between sessions with ongoing support.</p>
-    <div class="longterm-price">$200</div>
-    <div class="longterm-unit">every two sessions</div>
-    <p class="longterm-detail">That works out to <strong>$100 a session</strong>, spaced however you like. One session a month is just <strong>$100 a month</strong>, with my support in between. You're charged every two sessions, so it flexes with wherever life takes you.</p>
-    <p class="longterm-note">Offered to clients after three months of working together, a thank you for going the distance, and a more sustainable way to keep the work going for as long as it serves you.</p>
+<!-- ONGOING CONTAINERS -->
+<section class="containers">
+  <p class="section-label">Ongoing Coaching</p>
+  <div class="container-grid">
+
+    <div class="container-card">
+      <p class="container-tag">Let's build something</p>
+      <p class="container-duration">2 Months</p>
+      <h3 class="container-name">The <em>Foundation</em></h3>
+      <p class="container-sub">Start building a stronger relationship with yourself.</p>
+      <p class="container-desc">For when you know something needs to change and you want support to begin. We'll start to understand your patterns, reconnect with what you actually want, and lay the groundwork: boundaries, self-expression, the beliefs underneath, and learning to trust yourself again.</p>
+      <p class="container-price">$520</p>
+      <p class="container-priced">around 4 sessions across the two months</p>
+      <a href="https://heddavknight.github.io/Discovery-Call/" target="_blank" class="cta-btn cta-btn-dark">Book a discovery call &rarr;</a>
+    </div>
+
+    <div class="container-card featured">
+      <span class="container-badge">Signature</span>
+      <p class="container-tag">Let's change something</p>
+      <p class="container-duration">4 Months</p>
+      <h3 class="container-name">The <em>Shift</em></h3>
+      <p class="container-sub">Go beyond awareness and start changing the patterns.</p>
+      <p class="container-desc">The heart of my coaching. Four months is long enough to notice your patterns as they actually show up in your life, coach through them in real time, try new responses, and come back to reflect. This is where insight becomes real, lasting change.</p>
+      <p class="container-price">$690</p>
+      <p class="container-priced">around 6 sessions across the four months</p>
+      <a href="https://heddavknight.github.io/Discovery-Call/" target="_blank" class="cta-btn cta-btn-light">Book a discovery call &rarr;</a>
+    </div>
+
+    <div class="container-card">
+      <p class="container-tag">Let's live it</p>
+      <p class="container-duration">6 Months</p>
+      <h3 class="container-name">The <em>Becoming</em></h3>
+      <p class="container-sub">Deep support for who you're becoming.</p>
+      <p class="container-desc">Less about fixing yourself, more about who you're becoming. Who are you when you're no longer deciding from old beliefs and patterns? How do you actually live differently? Six months gives you space to work across several areas of your life and grow into the version of you that's emerging.</p>
+      <p class="container-price">$840</p>
+      <p class="container-priced">around 8 sessions across the six months</p>
+      <a href="https://heddavknight.github.io/Discovery-Call/" target="_blank" class="cta-btn cta-btn-dark">Book a discovery call &rarr;</a>
+    </div>
+
   </div>
-</section>
-
-<div class="divider">
-  <div class="divider-line"></div>
-  <div class="divider-dot"></div>
-  <div class="divider-line"></div>
-</div>
-
-<!-- FLEXIBLE PAYMENT -->
-<section class="payment-section">
-  <h2 class="payment-title">Flexible payment</h2>
-  <p class="payment-body">Every journey can be split into instalments, so the investment feels manageable without compromising the work. We'll find a rhythm that suits you and map out your sessions together on our first call.</p>
 </section>
 
 <!-- NEXT STEPS -->
 <section class="next-steps">
   <p class="hero-eyebrow" style="margin-bottom:16px;">Ready to start?</p>
   <h2 class="next-steps-title">Here's how it works</h2>
-  <p class="next-steps-sub">Once you know which journey feels right, reaching out takes less than a minute. Not quite sure yet? A free discovery call is the perfect first step — no commitment, just a conversation.</p>
+  <p class="next-steps-sub">Once you know which option feels right, reaching out takes less than a minute. Not quite sure yet? A free discovery call is the perfect first step. No commitment, just a conversation.</p>
 
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-number">01</div>
       <h3 class="step-title">Reach out</h3>
-      <p class="step-body">Message on WhatsApp or email to let me know which journey you're interested in and a little about where you're at right now.</p>
+      <p class="step-body">Message on WhatsApp or email to let me know which option you're interested in and a little about where you're at right now.</p>
       <div class="step-actions">
         <a href="https://wa.link/hhdygv" target="_blank" class="step-btn step-btn-primary">WhatsApp</a>
         <a href="mailto:selftrustclub@outlook.com" class="step-btn step-btn-secondary">Email</a>
